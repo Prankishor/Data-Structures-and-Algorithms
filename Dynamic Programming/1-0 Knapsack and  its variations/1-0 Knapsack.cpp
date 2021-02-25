@@ -136,7 +136,7 @@ int knapsackTab(int n, int weight[], int profit[], int bag)
 			if(weight[i-1]<=j) // Same condition as in recursion
 			{
 				//We are just replacing n with i and bag with j
-				dp[i][j]=max(profit[i]+dp[i-1][j-weight[i-1]], dp[i-1][j]);
+				dp[i][j]=max(profit[i-1]+dp[i-1][j-weight[i-1]], dp[i-1][j]);
 			}
 			else
 			{
